@@ -1,0 +1,61 @@
+<% layout("/layouts/boilerplate")%>
+
+<body style="text-align: center;">
+    
+
+<div class="headdd">
+    <button class="dag3" id="myButton" style="visibility: hidden;"> <i class="fa-solid fa-bars"></i></button>
+      Raja Jewellers
+      
+      <a href="https://maps.app.goo.gl/XPuLTW2p1S4fdR4G9"> <i class="fa-solid fa-shop bari"><p class="par" style="font-size: x-small; margin-right: 0.2rem;"><b>store location</b></p></i></a>
+  </div>
+
+<form method="post" action="/listings" enctype="multipart/form-data" >
+<div class="form-group" style="margin-top: 4rem;">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="listing[name]"> <br>
+</div>
+<div class="form-group">
+  <label for="image">Upload Image </label>
+  <input type="file" id="image" name="listing[image]" required>
+</div>
+<div class="form-group">
+  <label for="category">Select Category</label>
+<select name="listing[category]" id="category" required>
+  <option >Select Category</option>
+  <option value="ladieschain">Ladies Chain</option>
+  <option value="gentschain">Gents Chain</option>
+  <option value="necklece">Necklece</option>
+  <option value="choker">Choker</option>
+  <option value="pearlchoker/necklece">Pearl Choker/Necklece</option>
+  <option value="gentsring">Gents Ring</option>
+  <option value="ladiesring">Ladies Ring</option>
+  <option value="bracelet">Bracelet</option>
+  <option value="bangle">Bangle</option>
+  <option value="mantasha">Mantasha</option>
+  <option value="sankha">Sankha</option>
+  <option value="pola">Pola</option>
+  <option value="earing">Earing</option>
+  <option value="pendent">Pendent</option>
+</select>
+</div>
+<br>
+<div class="form-group">
+  <label for="weight">Weight</label>
+  <input type="text" id="weight" name="listing[weight]" required>
+</div>
+<div class="form-group">
+  <label for="trending">Trending</label>
+  <select name="listing[trending]" id="trending">
+    <option value="no">No</option>
+    <option value="yes" >Yes</option>
+  </select>
+</div>
+  <br>
+<button class="upbtn" type="submit">Upload</button>
+
+</form>
+
+
+
+</body>

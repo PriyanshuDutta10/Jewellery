@@ -1,0 +1,124 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    <div class="headdd">
+      <button class="dag3" id="myButton"> <i class="fa-solid fa-bars"></i></button>
+      <div class="slide" id="slide" style="font-size: small;background-color: aliceblue;">
+        <h1> <button id="close"><b>X</b></button>Category</h1>
+        
+       <% if(currUser){ %>
+        <a href=" /listings/new ">  <button class="box"><b>Add Jewellery</b></button></a>
+        <% } %>
+        <a href="/listings"><button class="box"><b>Trending</b></button></a>
+    <a href="/listings/ladieschain/pg1"><button class="box"><b>Ladies Chain</b></button></a>
+   <a href="/listings/gentschain/pg1"><button class="box"><b>Gents Chain</b></button></a>
+   <a href="/listings/necklace/pg1"><button class="box"><b>Necklace</b></button></a>
+   <a href="/listings/choker/pg1"> <button class="box"><b>Choker</b></button></a>
+  <a href="/listings/pearl/pg1"><button class="box"><b>Pearl Choker/Necklace</b></button></a>
+   <a href="/listings/gentsring/pg1"><button class="box"><b>Gents Ring</b></button></a>
+   <a href="/listings/ladiesring/pg1"><button class="box"><b>Ladies Ring</b></button></a>
+   <a href="/listings/bracelet/pg1"><button class="box"><b>Bracelet</b></button></a>
+   <a href="/listings/bangle/pg1"><button class="box"><b>Bangle</b></button></a>
+   <a href="/listings/mantasha/pg1"><button class="box"><b>Mantasha</b></button></a>
+   <a href="/listings/sankha/pg1"><button class="box"><b>Sankha</b></button></a>
+   <a href="/listings/pola/pg1"> <button class="box"><b>Pola</b></button> </a>
+   <a href="/listings/earing/pg1"><button class="box"><b>Earing</b></button></a>
+   <a href="/listings/pendent/pg1"><button class="box"><b>Pendent</b></button></a>
+   <div style="text-align: center;font-size: 2rem; margin-top: 25px; margin-bottom: 25px;margin-left: 5px; display: flex; justify-content: space-evenly;">
+    <a href="https://youtube.com/@rajajewellers1168?si=WF0ddWBLuLJ4JIY_"><i class="fa-brands fa-youtube" style="color: red;"></i></a>
+  
+   <a href="https://www.facebook.com/profile.php?id=100064074031841"> <i class="fa-brands fa-facebook" style="color: blue;"></i><br></a>
+   </div>
+   <% if(!currUser){ %>
+    <a href="/login"><button style="border: 2px solid rgb(180, 5, 5);border-radius: 5px; margin-bottom: 20px;margin-left: 33%;font-size: 1.2rem; color: rgb(180, 5, 5);background-color: rgb(243, 227, 138); ;" >Login</button></a>
+         <% } %>
+         <% if(currUser){ %>
+         <a href="/logout"><button style="border: 2px solid rgb(180, 5, 5);border-radius: 5px; margin-bottom: 20px;margin-left: 33%;font-size: 1.2rem; color: rgb(180, 5, 5);background-color: rgb(243, 227, 138); ;" >Logout</button></a>
+          <% } %>
+      </div>
+        Raja Jewellers
+        
+       <a href="https://maps.app.goo.gl/XPuLTW2p1S4fdR4G9"> <i class="fa-solid fa-shop bari"><p class="par" style="font-size: x-small; margin-right: 0.2rem;"><b>store location</b></p></i></a>
+    </div>
+    <div class="main">
+      <div class="left" id="myDiv">
+        <% if(currUser){ %>
+          <a href=" /listings/new ">  <button class="box"><b>Add Jewellery</b></button></a>
+          <% } %>
+          <a href="/listings"><button class="box"><b>Trending</b></button></a>
+        <a href="/listings/ladieschain/pg1"><button class="box"><b>Ladies Chain</b></button></a>
+       <a href="/listings/gentschain/pg1"><button class="box"><b>Gents Chain</b></button></a>
+       <a href="/listings/necklace/pg1"><button class="box"><b>Necklace</b></button></a>
+       <a href="/listings/choker/pg1"> <button class="box"><b>Choker</b></button></a>
+      <a href="/listings/pearl/pg1"><button class="box"><b>Pearl Choker/Necklace</b></button></a>
+       <a href="/listings/gentsring/pg1"><button class="box"><b>Gents Ring</b></button></a>
+       <a href="/listings/ladiesring/pg1"><button class="box"><b>Ladies Ring</b></button></a>
+       <a href="/listings/bracelet/pg1"><button class="box"><b>Bracelet</b></button></a>
+       <a href="/listings/bangle/pg1"><button class="box"><b>Bangle</b></button></a>
+       <a href="/listings/mantasha/pg1"><button class="box"><b>Mantasha</b></button></a>
+       <a href="/listings/sankha/pg1"><button class="box"><b>Sankha</b></button></a>
+       <a href="/listings/pola/pg1"> <button class="box"><b>Pola</b></button> </a>
+       <a href="/listings/earing/pg1"><button class="box"><b>Earing</b></button></a>
+       <a href="/listings/pendent/pg1"><button class="box"><b>Pendent</b></button></a>
+       <div style="text-align: center;font-size: 2rem; margin-top: 25px; margin-bottom: 25px;margin-left: 5px; display: flex; justify-content: space-evenly;">
+        <a href="https://youtube.com/@rajajewellers1168?si=WF0ddWBLuLJ4JIY_"><i class="fa-brands fa-youtube" style="color: red;"></i></a>
+      
+       <a href="https://www.facebook.com/profile.php?id=100064074031841"> <i class="fa-brands fa-facebook" style="color: blue;"></i><br></a>
+       </div>
+       <% if(!currUser){ %>
+        <a href="/login"><button style="border: 2px solid rgb(180, 5, 5);border-radius: 5px; margin-bottom: 20px;margin-left: 33%;font-size: 1.2rem; color: rgb(180, 5, 5);background-color: rgb(243, 227, 138); ;" >Login</button></a>
+             <% } %>
+             <% if(currUser){ %>
+             <a href="/logout"><button style="border: 2px solid rgb(180, 5, 5);border-radius: 5px; margin-bottom: 20px;margin-left: 33%;font-size: 1.2rem; color: rgb(180, 5, 5);background-color: rgb(243, 227, 138); ;" >Logout</button></a>
+              <% } %>
+      </div>
+    <div class="rightshow" style="text-align: center; ">
+        <img class="imageshow" src="<%= listing.image.url %>"  alt="" height="450px" width="440px" style="margin-top: 20px;border-radius: 10px;"> <br>
+        <div class="divshow" style="margin-bottom: 300px;">
+           <b> <p style="color: rgb(180, 5, 5) ;"><%= listing.name %></p></b>
+          <b>  <p style="color: rgb(180, 5, 5) ;"><%= listing.weight %> gm</p></b>
+
+            <% if(currUser && currUser._id.equals(listing.owner._id)){ %>
+<a href="/listings/<%= listing._id %>/edit"><button class="btnshow"  >Edit</button></a> 
+<form method="post" action="/listings/<%= listing._id %>?_method=delete">
+<button  class="btnshow" id="btnshow">Delete</button>
+</form>
+
+        
+         <% } %>
+        <p style="margin-top: 10rem;">
+         **We does not provide online ordering till now .This is a catalog website**
+        </p>
+        <img class="imageshow dokan" src="https://res.cloudinary.com/dxetqhukp/image/upload/v1721662583/WhatsApp_Image_2024-07-22_at_21.00.00_cdba4ba1_zmdhhh.jpg"  alt="" height="400px" width="440px" style="margin-top: 20px;border-radius: 10px;">
+        
+        <p>**Visit Our Shop near Kalibari,Shyamnagar**</p>
+        </div>
+
+        
+        <div class="fot">
+  <hr>
+          <div style="text-align: center; display: flex; justify-content: center;">
+        <a href="https://youtube.com/@rajajewellers1168?si=WF0ddWBLuLJ4JIY_">  <i class="fa-brands fa-youtube" style="color: red;margin: 10px;"></i></a>
+
+        <a href="https://www.facebook.com/profile.php?id=100064074031841">  <i class="fa-brands fa-facebook" style="color: blue; margin: 10px;"></i><br></a>
+           </div>
+           <div style="display: flex; justify-content: space-evenly; ">
+            <div style="text-align: center;">
+              <a href="/aboutus">About Us</a><br>
+              <a href="/contactus">Contact Us</a><br>
+              <a href="/store">Store Location</a>
+            </div>
+            <div style="text-align: center;padding-left: 40px;">
+              <a href="https://groww.in/gold-rates/gold-rate-today-in-west-bengal">Gold Rate Today</a><br>
+              <a href="/scamalert">Scam Alert</a>
+            </div>
+            <div style="text-align: center;">
+              <a href="/privacypolicy">Privacy Policy</a><br>
+              <a href="/terms&condition">Terms And Condition</a>
+            </div>
+           </div>
+  
+          </div>
+         
+    </div>
+    </div>
+
