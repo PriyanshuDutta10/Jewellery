@@ -128,7 +128,7 @@ app.get("/listings/:id",wrapAsync(async(req,res)=>{
    const listing =await Listing.findById(id);
    if(!listing){
    
-    res.redirect("/listings");
+    res.redirect("/");
    }
 res.render("listings/show.ejs",{listing});
 }));
@@ -161,7 +161,7 @@ app.delete("/listings/:id",isLoggedIn,wrapAsync(async(req,res)=>{
     let{id}=req.params;
     await Listing.findByIdAndDelete(id);
     
-    res.redirect("/listings")
+    res.redirect("/")
 }));
 
 
