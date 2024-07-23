@@ -93,7 +93,7 @@ app.get("/login",wrapAsync(async(req,res)=>{
     res.render("users/login.ejs");
 }));
 app.post("/login",saveRedirectUrl,passport.authenticate("local",{failureRedirect:"/login",failureFlash:true}),wrapAsync(async(req,res)=>{
-    res.redirect("/listings");
+    res.redirect("/");
 }));
 
 app.get("/logout",wrapAsync(async(req,res)=>{
@@ -101,7 +101,7 @@ app.get("/logout",wrapAsync(async(req,res)=>{
         if(err){
             next(err);
         }
-        res.redirect("/listings");
+        res.redirect("/");
     })
 }));
 
@@ -120,7 +120,7 @@ app.post("/listings",isLoggedIn,upload.single("listing[image]"),wrapAsync(async(
     
     await newListing.save();
     
-    res.redirect("/listings");
+    res.redirect("/");
 }));
 
 app.get("/listings/:id",wrapAsync(async(req,res)=>{
@@ -138,7 +138,7 @@ app.get("/listings/:id/edit",isLoggedIn,wrapAsync(async(req,res)=>{
     const listing =await Listing.findById(id);
     if(!listing){
     
-        res.redirect("/listings");
+        res.redirect("/");
     }
     res.render("listings/edit.ejs",{listing});
 }));
@@ -154,7 +154,7 @@ if(typeof req.file !=="undefined"){
 }
 
 
-res.redirect("/listings");
+res.redirect("/");
 }));
 
 app.delete("/listings/:id",isLoggedIn,wrapAsync(async(req,res)=>{
@@ -566,7 +566,7 @@ app.get("/listings/pendent/pg5",wrapAsync(async(req,res)=>{
 }))
 
 //trending
-app.get("/listings",wrapAsync(async(req,res)=>{
+app.get("/",wrapAsync(async(req,res)=>{
     let listing = (await Listing.find({trending:"yes"})).reverse().slice(0,20);
     let total=(await Listing.find({trending:"yes"})).length;
     res.render("trending/trending.ejs",{listing,total});
